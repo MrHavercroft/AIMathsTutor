@@ -6,7 +6,8 @@ import base64
 
 # ===== CONFIGURATION =====
 # Paste your OpenAI API key here
-client = openai.OpenAI(api_key='OPENAI_API_KEY')
+import os
+client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 # ===== STREAMLIT APP =====
 st.title("AI Maths Tutor Prototype")
